@@ -11,6 +11,13 @@ class TemplateHighLightfield extends TemplateEnum
         $this->vardef_map['colors'] = 'ext2';
         $this->vardef_map['text_color'] = 'ext3';
         $this->vardef_map['ext3'] = 'text_color';
+
+        // ext2 field is an array of strings
+        $this->vardefMapValidation['ext2'] = array(
+            'Assert\All' => array(
+                'constraints' => array('Assert\Type' => array('type' => 'string')),
+            ),
+        );
     }
 
     function populateFromPost ()

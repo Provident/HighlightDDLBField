@@ -12,9 +12,10 @@
 
 $manifest = array (
   'built_in_version' => '7.7.2.0',
-  'acceptable_sugar_versions' =>
-  array (
-    0 => '',
+  'acceptable_sugar_versions' => array(
+    'regex_matches' => array(
+      0 => "8\.0\.*",
+    ),
   ),
   'acceptable_sugar_flavors' =>
   array (
