@@ -14,7 +14,8 @@ $manifest = array (
   'built_in_version' => '7.7.2.0',
   'acceptable_sugar_versions' => array(
     'regex_matches' => array(
-      0 => "8\.0\.*",
+      0 => "7\.*\.*",
+      1 => "8\.*\.*",
     ),
   ),
   'acceptable_sugar_flavors' =>
@@ -35,65 +36,68 @@ $manifest = array (
   'remove_tables' => 'prompt',
 );
 
-
 $installdefs = array (
   'copy' =>
 	array (
-	  0 =>
+      0 =>
 		array (
-		  'from' => '<basepath>/custom/include/SugarFields/Fields/HighLight/SugarFieldHightLightfield.php',
-		  'to' => 'custom/include/SugarFields/Fields/HighLight/SugarFieldHightLightfield.php',
+		  'from' => '<basepath>/custom/include/generic/SugarWidgets/SugarWidgetFieldHighLightfield.php',
+		  'to' => 'custom/include/generic/SugarWidgets/SugarWidgetFieldHighLightfield.php',
 		),
 	  1 =>
+		array (
+		  'from' => '<basepath>/custom/include/SugarFields/Fields/HighLightfield/SugarFieldHighLightfield.php',
+		  'to' => 'custom/include/SugarFields/Fields/HighLightfield/SugarFieldHighLightfield.php',
+		),
+	  2 =>
 		array (
 		  'from' => '<basepath>/custom/Extension/application/Ext/clients/base/filters/operators/Highlight.php',
 		  'to' => 'custom/Extension/application/Ext/clients/base/filters/operators/Highlight.php',
 		),
-	  2 =>
+	  3 =>
 		array (
 		  'from' => '<basepath>/custom/Extension/modules/ModuleBuilder/Ext/Language/en_us.HighLightfield.php',
 		  'to' => 'custom/Extension/modules/ModuleBuilder/Ext/Language/en_us.HighLightfield.php',
 		),
-	  3 =>
+	  4 =>
 		array (
 		  'from' => '<basepath>/custom/Extension/modules/DynamicFields/Ext/Language/en_us.HighLightfield.php',
 		  'to' => 'custom/Extension/modules/DynamicFields/Ext/Language/en_us.HighLightfield.php',
 		),
-	  4 =>
+	  5 =>
 		array (
 		  'from' => '<basepath>/custom/modules/DynamicFields/templates/Fields/Forms/HighLight.tpl',
 		  'to' => 'custom/modules/DynamicFields/templates/Fields/Forms/HighLight.tpl',
 		),
-	  5 =>
+	  6 =>
 		array (
 		  'from' => '<basepath>/custom/modules/DynamicFields/templates/Fields/Forms/HighLightfield.php',
 		  'to' => 'custom/modules/DynamicFields/templates/Fields/Forms/HighLightfield.php',
 		),
-	  6 =>
+	  7 =>
 		array (
 		  'from' => '<basepath>/custom/modules/DynamicFields/templates/Fields/TemplateHighLightfield.php',
 		  'to' => 'custom/modules/DynamicFields/templates/Fields/TemplateHighLightfield.php',
 		),
-	  7 =>
+	  8 =>
 		array (
 		  'from' => '<basepath>/custom/clients/base/fields/HighLightfield/HighLightfield.js',
 		  'to' => 'custom/clients/base/fields/HighLightfield/HighLightfield.js',
 		),
-	  8 =>
+	  9 =>
 		array (
 		  'from' => '<basepath>/custom/clients/base/fields/HighLightfield/edit.hbs',
 		  'to' => 'custom/clients/base/fields/HighLightfield/edit.hbs',
 		),
-	  9 =>
+	  10 =>
 		array (
 		  'from' => '<basepath>/custom/clients/base/fields/HighLightfield/detail.hbs',
 		  'to' => 'custom/clients/base/fields/HighLightfield/detail.hbs',
 		),
-	  10 =>
+	  11 =>
 		array (
 		  'from' => '<basepath>/custom/clients/base/fields/HighLightfield/list.hbs',
 		  'to' => 'custom/clients/base/fields/HighLightfield/list.hbs',
 		),
-  ),
+    ),
 );
-
