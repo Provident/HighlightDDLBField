@@ -5,7 +5,7 @@ require_once('data/SugarBean.php');
 
 class SugarFieldHighLightfield extends SugarFieldEnum
 {
-    public function save(&$bean, $params, $field, $properties, $prefix = '')
+    public function save($bean, $params, $field, $properties, $prefix = '')
     {
         parent::save($bean, $params, $field, $properties, $prefix);
     }

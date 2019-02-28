@@ -164,4 +164,38 @@ class SugarWidgetFieldHighLightfield extends SugarWidgetReportField
         $str .= '</select>';
         return $str;
     }
+
+    public function queryFilterEquals($layout_def)
+    {
+		return $this->_get_column_select($layout_def)."='".$GLOBALS['db']->quote($layout_def['input_name0'][0])."'\n";
+    }
+
+    public function queryFilterNot_Equals_Str($layout_def)
+    {
+        $field_name = $this->_get_column_select($layout_def);
+        $input_name0 = $GLOBALS['db']->quote($layout_def['input_name0'][0]);
+        return "{$field_name} != '{$input_name0}' OR ({$field_name} IS NULL)\n";
+    }
+
+    public function queryFilterContains($layout_def)
+    {
+		return $this->_get_column_select($layout_def)." LIKE '%".$GLOBALS['db']->quote($layout_def['input_name0'][0])."%'\n";
+    }
+
+    public function queryFilterdoes_not_contain($layout_def)
+    {
+        $field_name = $this->_get_column_select($layout_def);
+        $input_name0 = $GLOBALS['db']->quote($layout_def['input_name0'][0]);
+        return "{$field_name} NOT LIKE '%{$input_name0}%' OR ({$field_name} IS NULL)\n";
+    }
+
+    public function queryFilterStarts_With($layout_def)
+    {
+		return $this->_get_column_select($layout_def)." LIKE '".$GLOBALS['db']->quote($layout_def['input_name0'][0])."%'\n";
+    }
+
+    public function queryFilterEnds_With($layout_def)
+    {
+		return $this->_get_column_select($layout_def)." LIKE '%".$GLOBALS['db']->quote($layout_def['input_name0'][0])."'\n";
+    }
 }
